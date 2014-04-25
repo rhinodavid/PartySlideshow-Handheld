@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DWPSSConnectionManager.h"
+#import "DWPhotoPreviewViewController.h"
 
-@interface DWViewController : UIViewController <NSNetServiceDelegate, GCDAsyncSocketDelegate>
+@interface DWViewController : UIViewController <DWPSSConnectionManagerDelegate>
+
+@property (strong) DWPSSConnectionManager *connectionManager;
+@property DWPhotoPreviewViewController *previewController;
+
+
+-(void)sendObject:(id)object;
 
 @end

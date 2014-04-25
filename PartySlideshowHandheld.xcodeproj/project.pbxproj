@@ -23,8 +23,9 @@
 		E5A9A2A51909C3A400416680 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A9A2841909C3A400416680 /* UIKit.framework */; };
 		E5A9A2AD1909C3A400416680 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5A9A2AB1909C3A400416680 /* InfoPlist.strings */; };
 		E5A9A2AF1909C3A400416680 /* PartySlideshowHandheldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9A2AE1909C3A400416680 /* PartySlideshowHandheldTests.m */; };
-		E5A9A2BA1909C63B00416680 /* DWConnectToSlideshowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9A2B91909C63B00416680 /* DWConnectToSlideshowViewController.m */; };
-		E5A9A2C01909D77D00416680 /* DWPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9A2BF1909D77D00416680 /* DWPacket.m */; };
+		E5A9A2C61909F52800416680 /* DWPhotoPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9A2C51909F52800416680 /* DWPhotoPreviewViewController.m */; };
+		E5A9A2D11909FE9D00416680 /* DWPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9A2CE1909FE9D00416680 /* DWPacket.m */; };
+		E5A9A2D21909FE9D00416680 /* DWPSSConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9A2D01909FE9D00416680 /* DWPSSConnectionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +61,12 @@
 		E5A9A2AA1909C3A400416680 /* PartySlideshowHandheldTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PartySlideshowHandheldTests-Info.plist"; sourceTree = "<group>"; };
 		E5A9A2AC1909C3A400416680 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E5A9A2AE1909C3A400416680 /* PartySlideshowHandheldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PartySlideshowHandheldTests.m; sourceTree = "<group>"; };
-		E5A9A2B81909C63B00416680 /* DWConnectToSlideshowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWConnectToSlideshowViewController.h; sourceTree = "<group>"; };
-		E5A9A2B91909C63B00416680 /* DWConnectToSlideshowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWConnectToSlideshowViewController.m; sourceTree = "<group>"; };
-		E5A9A2BE1909D77D00416680 /* DWPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWPacket.h; sourceTree = "<group>"; };
-		E5A9A2BF1909D77D00416680 /* DWPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWPacket.m; sourceTree = "<group>"; };
+		E5A9A2C41909F52800416680 /* DWPhotoPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWPhotoPreviewViewController.h; sourceTree = "<group>"; };
+		E5A9A2C51909F52800416680 /* DWPhotoPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWPhotoPreviewViewController.m; sourceTree = "<group>"; };
+		E5A9A2CD1909FE9D00416680 /* DWPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DWPacket.h; path = ../../PartySlideshow/Slideshow/DWPacket.h; sourceTree = "<group>"; };
+		E5A9A2CE1909FE9D00416680 /* DWPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DWPacket.m; path = ../../PartySlideshow/Slideshow/DWPacket.m; sourceTree = "<group>"; };
+		E5A9A2CF1909FE9D00416680 /* DWPSSConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DWPSSConnectionManager.h; path = ../../PartySlideshow/Slideshow/DWPSSConnectionManager.h; sourceTree = "<group>"; };
+		E5A9A2D01909FE9D00416680 /* DWPSSConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DWPSSConnectionManager.m; path = ../../PartySlideshow/Slideshow/DWPSSConnectionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,12 +133,11 @@
 				E5A9A2901909C3A400416680 /* DWAppDelegate.m */,
 				E5A9A2921909C3A400416680 /* Main_iPhone.storyboard */,
 				E5A9A2951909C3A400416680 /* Main_iPad.storyboard */,
+				E5A9A2C41909F52800416680 /* DWPhotoPreviewViewController.h */,
+				E5A9A2C51909F52800416680 /* DWPhotoPreviewViewController.m */,
 				E5A9A2981909C3A400416680 /* DWViewController.h */,
-				E5A9A2BE1909D77D00416680 /* DWPacket.h */,
-				E5A9A2BF1909D77D00416680 /* DWPacket.m */,
 				E5A9A2991909C3A400416680 /* DWViewController.m */,
-				E5A9A2B81909C63B00416680 /* DWConnectToSlideshowViewController.h */,
-				E5A9A2B91909C63B00416680 /* DWConnectToSlideshowViewController.m */,
+				E5A9A2D31909FEC500416680 /* Shared */,
 				E5A9A29B1909C3A400416680 /* Images.xcassets */,
 				E5A9A2871909C3A400416680 /* Supporting Files */,
 			);
@@ -169,6 +171,17 @@
 				E5A9A2AB1909C3A400416680 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E5A9A2D31909FEC500416680 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E5A9A2CD1909FE9D00416680 /* DWPacket.h */,
+				E5A9A2CE1909FE9D00416680 /* DWPacket.m */,
+				E5A9A2CF1909FE9D00416680 /* DWPSSConnectionManager.h */,
+				E5A9A2D01909FE9D00416680 /* DWPSSConnectionManager.m */,
+			);
+			name = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,9 +318,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5A9A2BA1909C63B00416680 /* DWConnectToSlideshowViewController.m in Sources */,
+				E5A9A2C61909F52800416680 /* DWPhotoPreviewViewController.m in Sources */,
 				E5A9A28D1909C3A400416680 /* main.m in Sources */,
-				E5A9A2C01909D77D00416680 /* DWPacket.m in Sources */,
+				E5A9A2D11909FE9D00416680 /* DWPacket.m in Sources */,
+				E5A9A2D21909FE9D00416680 /* DWPSSConnectionManager.m in Sources */,
 				E5A9A29A1909C3A400416680 /* DWViewController.m in Sources */,
 				E5A9A2911909C3A400416680 /* DWAppDelegate.m in Sources */,
 			);
