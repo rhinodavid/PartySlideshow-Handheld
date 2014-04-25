@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DWViewController : UIViewController
+@interface DWViewController : UIViewController <NSNetServiceDelegate, GCDAsyncSocketDelegate>
 
 @end
