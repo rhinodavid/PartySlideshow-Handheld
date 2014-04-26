@@ -16,19 +16,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Searching for slideshows..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qX-O1-VzY">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Searching for slideshows..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qX-O1-VzY">
                                 <rect key="frame" x="110" y="71" width="548" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="43"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aXu-UY-CgK">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aXu-UY-CgK">
                                 <rect key="frame" x="374" y="212" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9qX-O1-VzY" secondAttribute="trailing" constant="110" id="3xn-eF-5Br"/>
+                            <constraint firstItem="9qX-O1-VzY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="51" id="7Ba-QF-Qes"/>
+                            <constraint firstItem="9qX-O1-VzY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="110" id="Dmm-Jm-cdd"/>
+                            <constraint firstItem="9qX-O1-VzY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="Xue-Ea-qa3"/>
+                            <constraint firstItem="9qX-O1-VzY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="110" id="Y1I-2Z-7c7"/>
+                            <constraint firstAttribute="trailing" secondItem="9qX-O1-VzY" secondAttribute="trailing" constant="110" id="dVe-G4-Kld"/>
+                            <constraint firstItem="aXu-UY-CgK" firstAttribute="top" secondItem="9qX-O1-VzY" secondAttribute="bottom" constant="49" id="hh9-KN-bZa"/>
+                            <constraint firstItem="aXu-UY-CgK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="374" id="xg5-Fi-iuG"/>
+                            <constraint firstAttribute="trailing" secondItem="aXu-UY-CgK" secondAttribute="trailing" constant="357" id="yBf-Me-5me"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="wpi-Al-X7b" kind="modal" identifier="ViewPreviewScreen" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="r7d-Oj-B3l"/>
@@ -54,17 +65,34 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3q-Il-y2e">
+                                <rect key="frame" x="257" y="942" width="255" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Hide This Picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideCurrentPhoto:" destination="wpi-Al-X7b" eventType="touchUpInside" id="Lij-OS-Ung"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hVD-Km-Jd7" firstAttribute="top" secondItem="FBB-rt-4Ck" secondAttribute="top" id="18i-bK-zx8"/>
+                            <constraint firstItem="zoI-2s-yJW" firstAttribute="top" secondItem="D3q-Il-y2e" secondAttribute="bottom" constant="64" id="3vJ-r9-gff"/>
                             <constraint firstAttribute="trailing" secondItem="hVD-Km-Jd7" secondAttribute="trailing" id="GnL-zg-CBN"/>
+                            <constraint firstItem="D3q-Il-y2e" firstAttribute="leading" secondItem="FBB-rt-4Ck" secondAttribute="leading" constant="257" id="Hie-yz-9qj"/>
+                            <constraint firstItem="zoI-2s-yJW" firstAttribute="top" secondItem="D3q-Il-y2e" secondAttribute="bottom" constant="100" id="Q7A-ms-OKQ"/>
                             <constraint firstItem="zoI-2s-yJW" firstAttribute="top" secondItem="hVD-Km-Jd7" secondAttribute="bottom" id="ZUy-vT-A4G"/>
+                            <constraint firstAttribute="trailing" secondItem="D3q-Il-y2e" secondAttribute="trailing" constant="256" id="Zzw-vw-Ai7"/>
                             <constraint firstItem="hVD-Km-Jd7" firstAttribute="leading" secondItem="FBB-rt-4Ck" secondAttribute="leading" id="nwX-eF-muC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qlW-17-Ans"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
+                        <outlet property="hideButton" destination="D3q-Il-y2e" id="ybn-sm-067"/>
                         <outlet property="previewView" destination="hVD-Km-Jd7" id="puj-Te-vf5"/>
                     </connections>
                 </viewController>

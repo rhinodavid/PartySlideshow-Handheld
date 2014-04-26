@@ -10,7 +10,7 @@
 #import "DWPSSConnectionManager.h"
 #import "DWPhotoPreviewViewController.h"
 
-@interface DWViewController : UIViewController <DWPSSConnectionManagerDelegate>
+@interface DWViewController : UIViewController <DWPSSConnectionManagerDelegate, DWPhotoPreviewViewControllerDelegate>
 
 @property (strong) DWPSSConnectionManager *connectionManager;
 @property DWPhotoPreviewViewController *previewController;

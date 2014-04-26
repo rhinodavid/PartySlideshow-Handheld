@@ -38,6 +38,15 @@
 - (void)displayImageFromData:(NSData *)image {
     UIImage *newImage = [UIImage imageWithData:image];
     [self.previewView setImage:newImage];
+    [self.previewView setAlpha:1.0];
+    [self.hideButton setEnabled:YES];
+    
+}
+
+- (IBAction)hideCurrentPhoto:(id)sender {
+    [self.previewView setAlpha:0.4];
+    [self.hideButton setEnabled:NO];
+    [_delegate hidePhotoWithFileName:self.currentPhotoName];
 }
 
 /*

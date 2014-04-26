@@ -38,6 +38,7 @@
     //NSLog(sender);
     if ([[segue identifier] isEqualToString:@"ViewPreviewScreen"]) {
         _previewController = [segue destinationViewController];
+        [_previewController setDelegate:self];
     }
     
 }
@@ -58,6 +59,21 @@
 - (void) connectionRecievedImageData:(NSData *)imageData {
     if (_previewController) {
         [_previewController displayImageFromData:imageData];
+    }
+}
+
+- (void) connectionRecievedImageName:(NSString *)name {
+    if (_previewController) {
+        [_previewController setCurrentPhotoName:name];
+    }
+}
+
+#pragma mark -
+#pragma mark Delegate Methods
+
+- (void) hidePhotoWithFileName:(NSString *)name {
+    if (_connectionManager) {
+        [_connectionManager sendHidePhotoNamedCommand:name];
     }
 }
 
